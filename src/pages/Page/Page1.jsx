@@ -21,7 +21,7 @@ const Page1 = () => {
       {keyword >= utils.Level[1] && (
         <>
           <p className="title">Level 1.</p>
-          <p>둥글다</p>
+          <p>둥글다!</p>
         </>
       )}
       {/* 레벨 2는 2와3이 볼수있음 */}

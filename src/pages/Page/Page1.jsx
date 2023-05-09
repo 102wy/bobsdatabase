@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -9,14 +9,23 @@ const Page1 = () => {
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
 
+  useEffect(() => {
+    if (keyword === utils.Level[1]) {
+      window.open("https://youtu.be/BmLAoCLpE5k");
+    } else return;
+  }, [keyword]);
+
   return (
     <Wrap>
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>
-        <img src="/images/example.jpeg" alt="예시이미지" />
-      </p>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img
+          src="https://img.freepik.com/premium-photo/seascape-in-the-early-morning-sunrise-over-the-sea_416511-5490.jpg?w=1480"
+          alt="예시이미지"
+        />
+      </div>
       {/* 레벨 1은 1~3이 다 볼수있음 */}
       {keyword >= utils.Level[1] && (
         <>

@@ -41,4 +41,8 @@ export const GlobalStyle = createGlobalStyle`
   ul,li {
     list-style: none;
   }
+  img {
+    max-width: calc(100vw - 10px);
+    
+  }
 `;

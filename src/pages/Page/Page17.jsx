@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page17 = () => {
   const { pathname } = useLocation();
@@ -14,26 +14,20 @@ const Page17 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>🍩</p>
+      <p>민광선의 오래된 친구.</p>
       {/* 레벨 1은 1~3이 다 볼수있음 */}
       {keyword >= utils.Level[1] && (
         <>
           <p className="title">Level 1.</p>
-          <p>심슨이좋아한다</p>
-        </>
-      )}
-      {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
-        <>
-          <p className="title">Level 2.</p>
-          <p>미국경찰들이 많이먹던데</p>
-        </>
-      )}
-      {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
-        <>
-          <p className="title">Level 3.</p>
-          <p>전 별로 안좋아합니다</p>
+          <p>
+            어렸을 적 부터 민광선과 한동네에 살며 오랜 우정을 쌓았다.
+            <br />
+            민광선이 생전에 유일하게 믿고 이야기하던 친구이다. 본인의 결혼이 재산이 없어서 고민하던 중에 민광선이 부인 몰래 5,000만원을 빌려주었다.
+            <br />
+            그리고 민광선이 사망한 후 경찰조사를 받았으나, 별다른 진술을 하지 않았다.
+            <br />
+            본인도 그 당시 너무 충격을 받았고, 어린 민서우양을 생각하여 다 이야기하지 않았을 가능성이 있다.
+          </p>
         </>
       )}
     </Wrap>

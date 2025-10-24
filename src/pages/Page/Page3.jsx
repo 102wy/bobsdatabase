@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page3 = () => {
   const { pathname } = useLocation();
@@ -14,26 +14,33 @@ const Page3 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>초록색이다</p>
+      <p>
+        흥신소.
+        <br />
+        사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는 심부름센터.
+      </p>
       {/* 레벨 1은 1~3이 다 볼수있음 */}
       {keyword >= utils.Level[1] && (
         <>
           <p className="title">Level 1.</p>
-          <p>길다</p>
-        </>
-      )}
-      {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
-        <>
-          <p className="title">Level 2.</p>
-          <p>가시가있다</p>
+          <p>
+            사장 : 엉클밥
+            <br />
+            사훈 : "은밀하게 쫒고, 끝까지 추격한다!"
+          </p>
         </>
       )}
       {/* 레벨 3은 3만 볼수있음  */}
       {keyword >= utils.Level[3] && (
         <>
           <p className="title">Level 3.</p>
-          <p>생으로먹을수있다</p>
+          <p>
+            초이스 미제사건해결소의 위장 회사.
+            <br />
+            흥신소에서 유능한 인재들을 골라 훈련시켜 뽑은 탐정들의 단체.
+            <br />
+            각종 미제 사건이나 기획 수사를 전담하는 사설수사기관.
+          </p>
         </>
       )}
     </Wrap>

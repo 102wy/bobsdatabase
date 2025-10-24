@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page19 = () => {
   const { pathname } = useLocation();
@@ -14,28 +14,8 @@ const Page19 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>폭신폭신</p>
-      {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
-        <>
-          <p className="title">Level 1.</p>
-          <p>예전에 이불을 팔아봤는데</p>
-        </>
-      )}
-      {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
-        <>
-          <p className="title">Level 2.</p>
-          <p>대구공장에서 많이 만듭니다</p>
-        </>
-      )}
-      {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
-        <>
-          <p className="title">Level 3.</p>
-          <p>폭신폭신</p>
-        </>
-      )}
+      <img src="/images/19page_lv0.png" alt="담배" />
+      <p>다양한 담배의 종류</p>
     </Wrap>
   );
 };

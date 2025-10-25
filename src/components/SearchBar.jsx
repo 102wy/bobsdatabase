@@ -61,7 +61,7 @@ const SearchBar = () => {
       </div>
       <div className="home">
         <img
-          src="/images/home.png"
+          src={`${process.env.PUBLIC_URL}/images/home.png`}
           alt="홈으로가기"
           onClick={() => navigate("/")}
         />

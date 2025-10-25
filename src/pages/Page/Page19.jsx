@@ -1,8 +1,8 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
+import styled from "styled-components";
 
-import * as utils from '../../utils';
+import * as utils from "../../utils";
 
 const Page19 = () => {
   const { pathname } = useLocation();
@@ -14,7 +14,7 @@ const Page19 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <img src="/images/19page_lv0.png" alt="담배" />
+      <img src={`${process.env.PUBLIC_URL}/images/19page_lv0.png`} alt="담배" />
       <p>다양한 담배의 종류</p>
     </Wrap>
   );

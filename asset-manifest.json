@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/bobsdatabase/static/js/main.bdd68008.js",
+    "main.js": "/bobsdatabase/static/js/main.d4703bc1.js",
     "static/js/787.930ce390.chunk.js": "/bobsdatabase/static/js/787.930ce390.chunk.js",
     "index.html": "/bobsdatabase/index.html",
-    "main.bdd68008.js.map": "/bobsdatabase/static/js/main.bdd68008.js.map",
+    "main.d4703bc1.js.map": "/bobsdatabase/static/js/main.d4703bc1.js.map",
     "787.930ce390.chunk.js.map": "/bobsdatabase/static/js/787.930ce390.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bdd68008.js"
+    "static/js/main.d4703bc1.js"
   ]
 }

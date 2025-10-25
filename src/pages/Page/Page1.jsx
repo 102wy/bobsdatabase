@@ -34,7 +34,9 @@ const Page1 = () => {
           allowFullScreen
         ></iframe>
       </p>
-
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
       {keyword >= utils.Level[3] && (
         <>

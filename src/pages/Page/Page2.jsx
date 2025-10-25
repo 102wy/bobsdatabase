@@ -1,8 +1,8 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
+import styled from "styled-components";
 
-import * as utils from '../../utils';
+import * as utils from "../../utils";
 
 const Page2 = () => {
   const { pathname } = useLocation();
@@ -15,7 +15,9 @@ const Page2 = () => {
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
       <p>밥스흥신소 사장. </p>
-
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
       {keyword >= utils.Level[3] && (
         <>

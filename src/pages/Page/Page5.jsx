@@ -34,6 +34,9 @@ const Page5 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
       {keyword >= utils.Level[2] && (
         <>
@@ -46,6 +49,9 @@ const Page5 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
       {keyword >= utils.Level[3] && (
         <>
@@ -68,7 +74,7 @@ const Page5 = () => {
 export default Page5;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

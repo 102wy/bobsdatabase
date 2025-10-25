@@ -1,13 +1,16 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
+import styled from "styled-components";
 
-import * as utils from '../../utils';
+import * as utils from "../../utils";
+import * as hooks from "../../hooks";
 
 const Page3 = () => {
   const { pathname } = useLocation();
-  const { keyword } = useParams();
+  // const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+
+  const { keyword, levelName, keywordLevel } = hooks.useLevel();
 
   return (
     <Wrap>
@@ -17,10 +20,11 @@ const Page3 = () => {
       <p>
         흥신소.
         <br />
-        사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는 심부름센터.
+        사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는
+        심부름센터.
       </p>
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {keywordLevel >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <p>
@@ -30,6 +34,9 @@ const Page3 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
       {keyword >= utils.Level[3] && (
         <>

@@ -17,12 +17,12 @@ export const keywordToIndex = (keyword) => {
 export const keywordDecode = (key) => {
   const keyword = key;
   const regex = /\/([^/]+)\//;
-  const match = keyword.match(regex);
+  const match = keyword && keyword?.match(regex);
   const extracted = match && match[1];
 
   // 만약 '/'가 포함되어 있지 않은 경우에는 전체 keyword를 반환
   if (!extracted) {
-    return decodeURI(keyword.replace(/\//g, ""));
+    return decodeURI(keyword?.replace(/\//g, ""));
   }
 
   return extracted ? decodeURI(extracted) : "";

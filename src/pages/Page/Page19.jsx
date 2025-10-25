@@ -23,7 +23,7 @@ const Page19 = () => {
 export default Page19;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

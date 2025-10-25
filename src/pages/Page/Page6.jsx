@@ -8,6 +8,7 @@ const Page6 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -18,8 +19,11 @@ const Page6 = () => {
         끈이 목 부위를 압박하여 피부에 형성된 압박흔 또는 압박성 피부 까짐.
         목맴에서 가장 중요한 소견이다.
       </p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <img
@@ -44,8 +48,11 @@ const Page6 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
           <p>
@@ -65,7 +72,7 @@ const Page6 = () => {
 export default Page6;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

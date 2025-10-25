@@ -8,6 +8,7 @@ const Page12 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -15,8 +16,11 @@ const Page12 = () => {
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
       <p>60세 여성이며 애기동산의 교주이다.</p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <img
@@ -38,8 +42,11 @@ const Page12 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
           <p>
@@ -52,8 +59,11 @@ const Page12 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>천벌을 받아 마땅한 여자이고, 언젠가 그 천벌을 내리러 가주마.</p>
@@ -66,7 +76,7 @@ const Page12 = () => {
 export default Page12;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

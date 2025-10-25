@@ -8,21 +8,14 @@ const Page1 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
-
-  // useEffect(() => {
-  //   if (keyword === utils.Level[1]) {
-  //     window.open("https://youtu.be/BmLAoCLpE5k");
-  //   } else return;
-  // }, [keyword]);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <img src="https://img.freepik.com/premium-photo/seascape-in-the-early-morning-sunrise-over-the-sea_416511-5490.jpg?w=1480" alt="예시이미지" />
-      </div> */}
+
       <p>
         <iframe
           width="auto"
@@ -38,7 +31,7 @@ const Page1 = () => {
       <br />
       <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>
@@ -120,7 +113,7 @@ const Page1 = () => {
 export default Page1;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

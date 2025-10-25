@@ -8,6 +8,7 @@ const Page14 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -15,8 +16,11 @@ const Page14 = () => {
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
       <p>56세의 남성. 바코드레코드의 대표이사.</p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <img
@@ -33,8 +37,11 @@ const Page14 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
 
@@ -50,8 +57,11 @@ const Page14 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>
@@ -72,7 +82,7 @@ const Page14 = () => {
 export default Page14;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

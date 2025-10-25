@@ -8,6 +8,7 @@ const Page10 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -19,8 +20,11 @@ const Page10 = () => {
         alt="애기동산"
       />
       <p>2002년에 김기숙이 창시한 대한민국의 협업마을형 신흥종교.</p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <p>
@@ -53,8 +57,11 @@ const Page10 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
           <p>
@@ -83,8 +90,11 @@ const Page10 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>
@@ -110,7 +120,7 @@ const Page10 = () => {
 export default Page10;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

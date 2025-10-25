@@ -8,6 +8,7 @@ const Page8 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -17,14 +18,17 @@ const Page8 = () => {
       <p>
         암호 체계 중의 하나이다. 키워드 글자를 우선배치하여 재조합하는 방식이다.
       </p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
+          <p className="title">Level 1.</p>
           <img
             src={`${process.env.PUBLIC_URL}/images/8page_lv1.png`}
             alt="키워드암호"
           />
-          <p className="title">Level 1.</p>
           <p>
             keyword를 키워드로 잡고 제시한 암호문의 예
             <br />
@@ -33,8 +37,11 @@ const Page8 = () => {
           </p>
         </>
       )}
+      <br />
+      <br />
+      <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
           <img
@@ -54,7 +61,7 @@ const Page8 = () => {
 export default Page8;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

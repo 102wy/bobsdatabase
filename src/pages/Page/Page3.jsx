@@ -7,10 +7,9 @@ import * as hooks from "../../hooks";
 
 const Page3 = () => {
   const { pathname } = useLocation();
-  // const { keyword } = useParams();
+  const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
-
-  const { keyword, levelName, keywordLevel } = hooks.useLevel();
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -23,8 +22,11 @@ const Page3 = () => {
         사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는
         심부름센터.
       </p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keywordLevel >= 1 && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <p>
@@ -38,7 +40,7 @@ const Page3 = () => {
       <br />
       <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>
@@ -57,7 +59,7 @@ const Page3 = () => {
 export default Page3;
 
 const Wrap = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   h2 {
     text-align: center;
     font-size: 24px;

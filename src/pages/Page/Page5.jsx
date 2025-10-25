@@ -8,6 +8,7 @@ const Page5 = () => {
   const { pathname } = useLocation();
   const { keyword } = useParams();
   const title = utils.keywordDecode(pathname);
+  const levelIndex = utils.keywordToIndex(utils.keywordDecode(keyword));
 
   return (
     <Wrap>
@@ -19,8 +20,11 @@ const Page5 = () => {
         alt="바코드레코드"
       />
       <p>국내 굴지의 음반회사.</p>
+      <br />
+      <br />
+      <br />
       {/* 레벨 1은 1~3이 다 볼수있음 */}
-      {keyword >= utils.Level[1] && (
+      {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
           <p>
@@ -38,7 +42,7 @@ const Page5 = () => {
       <br />
       <br />
       {/* 레벨 2는 2와3이 볼수있음 */}
-      {keyword >= utils.Level[2] && (
+      {levelIndex >= 2 && (
         <>
           <p className="title">Level 2.</p>
           <p>
@@ -53,7 +57,7 @@ const Page5 = () => {
       <br />
       <br />
       {/* 레벨 3은 3만 볼수있음  */}
-      {keyword >= utils.Level[3] && (
+      {levelIndex >= 3 && (
         <>
           <p className="title">Level 3.</p>
           <p>

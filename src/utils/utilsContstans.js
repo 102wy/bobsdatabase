@@ -5,6 +5,15 @@ export const Level = {
   3: "GREEN",
 };
 
+// URL keyword -> 숫자 레벨로 변환
+export const keywordToIndex = (keyword) => {
+  // Level에서 value가 keyword와 같은 key 찾기
+  const entry = Object.entries(Level).find(
+    ([, value]) => value.toUpperCase() === keyword.toUpperCase()
+  );
+  return entry ? Number(entry[0]) : 0; // 없으면 기본 0
+};
+
 export const keywordDecode = (key) => {
   const keyword = key;
   const regex = /\/([^/]+)\//;

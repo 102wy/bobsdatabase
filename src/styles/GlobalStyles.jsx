@@ -43,10 +43,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   img {
     max-width: calc(100vw - 40px);
-    margin-bottom: 20px;
     
   }
-
+  .title {
+    margin-bottom:20px
+  }
   .keyword {
     color: #6d1787;
     font-weight: bold;

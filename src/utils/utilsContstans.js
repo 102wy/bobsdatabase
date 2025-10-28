@@ -1,8 +1,8 @@
 export const Level = {
   0: "COFFEE",
-  1: "RED",
-  2: "BLUE",
-  3: "GREEN",
+  1: "BAT",
+  2: "OWL",
+  3: "KITE",
 };
 
 // URL keyword -> 숫자 레벨로 변환

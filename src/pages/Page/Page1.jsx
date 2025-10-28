@@ -20,7 +20,7 @@ const Page1 = () => {
         <iframe
           width="auto"
           height="315"
-          src="https://www.youtube.com/embed/7wc0C9tLM_A?si=Im4wwwf87vdMQAgo"
+          src="https://youtu.be/FZAaLyY-PlI?si=0C37Ag8VM2ElDjjj"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

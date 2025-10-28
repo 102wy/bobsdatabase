@@ -15,7 +15,10 @@ const Page2 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>밥스흥신소 사장. </p>
+      <p>
+        <span className="keyword">밥스흥신소 </span>
+        사장.
+      </p>
       <br />
       <br />
       <br />

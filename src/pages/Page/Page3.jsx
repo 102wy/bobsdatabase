@@ -30,7 +30,7 @@ const Page3 = () => {
         <>
           <p className="title">Level 1.</p>
           <p>
-            사장 : 엉클밥
+            사장 : <span className="keyword">엉클밥</span>
             <br />
             사훈 : "은밀하게 쫒고, 끝까지 추격한다!"
           </p>

@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   body {
     font-family: 'DungGeunMo', 'Noto Sans KR', sans-serif;
-    color: #323232;
+    color: #505050;
     background-color: #c0c0c0;
   }
   input {
@@ -42,7 +42,16 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
   img {
-    max-width: calc(100vw - 10px);
+    max-width: calc(100vw - 40px);
+    margin-bottom: 20px;
     
+  }
+
+  .keyword {
+    color: #6d1787;
+    font-weight: bold;
+  }
+  .bold {
+    color: #000
   }
 `;

@@ -15,7 +15,9 @@ const Page16 = () => {
       <h2>{title}</h2>
       {/* 레벨 0은 모두가 보임 */}
       <p className="title">Level 0.</p>
-      <p>8세 여자아이, 민광선의 무남독녀 외동딸.</p>
+      <p>
+        8세 여자아이, <span className="keyword">민광선</span>의 무남독녀 외동딸.
+      </p>
       <br />
       <br />
       <br />
@@ -23,7 +25,10 @@ const Page16 = () => {
       {levelIndex >= 1 && (
         <>
           <p className="title">Level 1.</p>
-          <p>민광선이 죽은 후 판권의 절반을 상속받았다. </p>
+          <p>
+            <span className="keyword">민광선</span>이 죽은 후 판권의 절반을
+            상속받았다.{" "}
+          </p>
         </>
       )}
       <br />
@@ -34,7 +39,8 @@ const Page16 = () => {
         <>
           <p className="title">Level 3.</p>
           <p>
-            한달 전 실종. 민서우의 판권은 성해숙에게 넘어갔고, 다시 바코드레코드
+            한달 전 실종. 민서우의 판권은 성해숙에게 넘어갔고, 다시{" "}
+            <span className="keyword">바코드레코드 </span>
             법인에 귀속된 걸 확인 할 수 있었다.
           </p>
         </>

@@ -78,6 +78,7 @@ const Wrap = styled.div`
   background-color: #020181;
   padding: 10px 5px;
   align-items: center;
+
   .button-wrap {
     display: flex;
     height: 30px;
@@ -92,6 +93,7 @@ const Wrap = styled.div`
     img {
       height: 30px;
       width: auto;
+      margin-bottom: 0 !important;
     }
   }
 `;

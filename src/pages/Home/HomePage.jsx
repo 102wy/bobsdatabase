@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -10,12 +10,12 @@ const HomePage = () => {
   const [keyword, setKeyword] = useState();
 
   const onSearch = (e) => {
-    let path = ""; // 초기 경로
+    let path = ''; // 초기 경로
     let level; // level 변수 선언
-    let keywordWithoutSpace = keyword.replace(/\s+/g, ""); // 키워드에서 공백 제거
+    let keywordWithoutSpace = keyword.replace(/\s+/g, ''); // 키워드에서 공백 제거
 
     if (!keywordWithoutSpace) {
-      navigate("/");
+      navigate('/');
       return;
     }
 
@@ -24,9 +24,7 @@ const HomePage = () => {
     // 검색어에 Level에 있는 단어가 포함되어 있는지 체크
     for (level in utils.Level) {
       if (keywordWithoutSpace.includes(utils.Level[level])) {
-        path += `/${keywordWithoutSpace.replace(utils.Level[level], "")}/${
-          utils.Level[level]
-        }`; // 수정된 부분
+        path += `/${keywordWithoutSpace.replace(utils.Level[level], '')}/${utils.Level[level]}`; // 수정된 부분
         isLevelIncluded = true; // Level에 해당하는 단어가 검색어에 포함되어 있다면 플래그를 설정
         break;
       }
@@ -46,7 +44,7 @@ const HomePage = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       onSearch();
     }
   };
@@ -54,16 +52,12 @@ const HomePage = () => {
   return (
     <Wrap>
       <h1>
-        BOB'S 흥신소 <br />
+        밥스흥신소 <br />
         데이터베이스
       </h1>
 
       <SearchWrap>
-        <input
-          type="text"
-          onChange={(e) => setKeyword(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
+        <input type="text" onChange={(e) => setKeyword(e.target.value)} onKeyDown={handleKeyDown} />
         <button onClick={onSearch}>검색</button>
       </SearchWrap>
     </Wrap>

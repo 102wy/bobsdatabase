@@ -1,9 +1,9 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
-import * as hooks from "../../hooks";
+import * as utils from '../../utils';
+import * as hooks from '../../hooks';
 
 const Page3 = () => {
   const { pathname } = useLocation();
@@ -19,8 +19,7 @@ const Page3 = () => {
       <p>
         흥신소.
         <br />
-        사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는
-        심부름센터.
+        사람찾기, 미행, 불륜조사, 떼인돈 받아주기 등 부탁하는 일은 다 들어주는 심부름센터.
       </p>
       <br />
       <br />

@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page16 = () => {
   const { pathname } = useLocation();
@@ -26,8 +26,7 @@ const Page16 = () => {
         <>
           <p className="title">Level 1.</p>
           <p>
-            <span className="keyword">민광선</span>이 죽은 후 판권의 절반을
-            상속받았다.{" "}
+            <span className="keyword">민광선</span>이 죽은 후 판권의 절반을 상속받았다.
           </p>
         </>
       )}
@@ -39,9 +38,7 @@ const Page16 = () => {
         <>
           <p className="title">Level 3.</p>
           <p>
-            한달 전 실종. 민서우의 판권은 성해숙에게 넘어갔고, 다시{" "}
-            <span className="keyword">바코드레코드 </span>
-            법인에 귀속된 걸 확인 할 수 있었다.
+            한달 전 실종. <span className="keyword">민서우</span>의 판권은 <span className="keyword">성해숙</span>에게 넘어갔고, 다시 <span className="keyword">바코드레코드</span> 법인에 귀속된 걸 확인 할 수 있었다.
           </p>
         </>
       )}

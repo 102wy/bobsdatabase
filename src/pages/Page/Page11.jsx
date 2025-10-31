@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page11 = () => {
   const { pathname } = useLocation();
@@ -19,11 +19,9 @@ const Page11 = () => {
         <>
           <p className="title">Level 3.</p>
           <p>
-            <span className="keyword">밥스흥신소</span>를 위장 회사로 둔
-            사설수사기관이다.
+            <span className="keyword">밥스흥신소</span>를 위장 회사로 둔 사설수사기관이다.
             <br />
-            흥신소에서 유능한 인재들을 골라 훈련시켜 뽑은 탐정들의 단체로 각종
-            미제 사건이나 기획 수사를 위주로 한다.
+            흥신소에서 유능한 인재들을 골라 훈련시켜 뽑은 탐정들의 단체로 각종 미제 사건이나 기획 수사를 위주로 한다.
             <br />
             다음 수사는 <span className="keyword">애기동산</span>의 진상!
           </p>

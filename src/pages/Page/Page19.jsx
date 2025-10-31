@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
-import * as utils from "../../utils";
+import * as utils from '../../utils';
 
 const Page19 = () => {
   const { pathname } = useLocation();
